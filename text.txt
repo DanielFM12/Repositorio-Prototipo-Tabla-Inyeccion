@@ -8,7 +8,8 @@ Link del Proyecto en Vivo y Publico
 https://danielfm12.github.io/Repositorio-Prototipo-Tabla-Inyeccion/
 
 en la terminal poner
-git add .
-git commit -m 'nombre o descripcion'
+git add . <- guarda los cambios hecho
+git commit -m 'nombre o descripcion' <- guarda a nivel local
+git push <- envia el codigo a git hub
 
 Esto para que se actualice el repo y se vea actualizado en la pag web vivo
