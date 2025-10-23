@@ -3,3 +3,12 @@ https://excalidraw.com/#room=a06f06e3ff2d98231fe4,y2bH1hH_YgboNLYw0ftspA
 
 1° Version -> Prototipo v1
 -> Cosas base
+
+Link del Proyecto en Vivo y Publico
+https://danielfm12.github.io/Repositorio-Prototipo-Tabla-Inyeccion/
+
+en la terminal poner
+git add .
+git commit -m 'nombre o descripcion'
+
+Esto para que se actualice el repo y se vea actualizado en la pag web vivo
