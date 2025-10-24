@@ -4,77 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla Moldes y Horarios</title>
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        #caja{
-            width: 100px;
-            height: 100px;
-            background-color: red;
-        }
-        #contenedor{
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Proyecto de Tabla_Moldes_Horario Inyeccion</h1>
 
-    <div id="caja" draggable="true"></div>
-    <div id="contenedor">
-        <h1>Contenedor</h1>
-    </div>
-    <div>
-        <script>
-            const caja = document.querySelector('#caja');
-            
-            /*
-            caja.addEventListener("dragend", e => {
-                console.log("Drag End")
-            })
-
-            caja.addEventListener("dragstart", e => {
-                console.log("Drag Start")
-            })
-
-            caja.addEventListener("drag", e => {
-                console.log("Drag")
-            })*/
-
-            const contenedor = document.querySelector('#contenedor');
-
-            contenedor.addEventListener("dragenter", e => {
-                console.log("Drag Enter")
-            });
-
-            contenedor.addEventListener("dragleave", e => {
-                console.log("Drag Leave")
-            });
-            
-            contenedor.addEventListener("dragover", e => {
-                e.preventDefault()
-                console.log("Drag Over")
-            });
-
-            contenedor.addEventListener("drop", e => {
-                console.log("Drop")
-                contenedor.appendChild(caja);
-            });
-
-
-        </script>
-
-        <div class="container">
-            <div></div>
+    <div class="tabla_Revision"> <!--gameBoard-->
+        <div class="contenedor_base">
+            <h1>HORA/MAQUINA</h1>
         </div>
 
+        <div class="contenedor_X">
+            <div class="contenedor_X_1400">
+                <h2>14:00</h2>
+            </div>
+            <div class="contenedor_X_1430">
+                <h2>14:30</h2>
+            </div>
+            <div class="contenedor_X_1500">
+                <h2>15:00</h2>
+            </div>
+        </div>
 
+        <div class="contenedor_Y">
+            <div class="contenedor_Y_MI001">
+                <h2>MI-001</h2>
+            </div>
+        </div>
 
+        <main class="Tabla">
+            <div class="cuadro contenedor"> <!-- square beigeSquare--></div>
+            <div class="cuadro bcontenedor"></div> <!-- square brownSquare-->
+            <div class="cuadro contenedor"></div> <!-- square beigeSquare-->
+        </main>
+        
+          
+        <div class="tabla_Control">
+            <section class="Moldes_En_Uso">
+                <div class="FichaMolde1" id="Ficha1" draggable="true">
+                    <h1>MO - 371</h1>
+                    <h1>________</h1>
+                    <h1>________</h1>
+                </div>
+            </section>
+        </div>
 
-    </div>
 </body>
 </html>

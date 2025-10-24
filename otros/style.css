@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c5c5c5;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 30px;
+}
+
+.FichaMolde1{
+    width: 100%;
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    
+}
+
+.tabla_Revision{    /*gameBoard*/
+    width: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    
+    /*
+    .Tabla{
+        width: 150px;
+        height: 150px;
+    }*/
+    .cuadro.highlight{
+        background-color: #002aff7b;
+    }
+
+    .cuadro{
+        width: 150px;
+        height: 150px;
+    }
+
+    .contenedor{     /*square beigeSquare*/
+        background-color: beige;
+    }
+    .bcontenedor{
+        background-color: brown;
+    }
+
+}
+
+
+table th{
+    width: 15em;
+    padding: 1em;
+    font-size: 20px;
+}
+
+
+.tabla_prueba{
+    width: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+
+    .cuadro.highlight{
+        background-color: #002aff7b;
+    }
+
+    .cuadro{
+        width: 150px;
+        height: 150px;
+    }
+
+    .contenedor{     /*square beigeSquare*/
+        background-color: beige;
+    }
+}
