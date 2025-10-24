@@ -9,3 +9,11 @@
     height: 100px;
     background-color: red;
 }
+
+.contenedor{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}

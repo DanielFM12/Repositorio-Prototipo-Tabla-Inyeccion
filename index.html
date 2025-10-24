@@ -5,10 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla Moldes y Horarios</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #caja{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #contenedor{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Proyecto de Tabla_Moldes_Horario Inyeccion</h1>
 
-    <div class="caja"></div>
+    <div id="caja" draggable="true"></div>
+    <div id="contenedor">
+        <h1>Contenedor</h1>
+    </div>
+    <div>
+        <script>
+            const caja = document.querySelector('#caja');
+            
+            /*
+            caja.addEventListener("dragend", e => {
+                console.log("Drag End")
+            })
+
+            caja.addEventListener("dragstart", e => {
+                console.log("Drag Start")
+            })
+
+            caja.addEventListener("drag", e => {
+                console.log("Drag")
+            })*/
+
+            const contenedor = document.querySelector('#contenedor');
+
+            contenedor.addEventListener("dragenter", e => {
+                console.log("Drag Enter")
+            });
+
+            contenedor.addEventListener("dragleave", e => {
+                console.log("Drag Leave")
+            });
+            
+            contenedor.addEventListener("dragover", e => {
+                e.preventDefault()
+                console.log("Drag Over")
+            });
+
+            contenedor.addEventListener("drop", e => {
+                console.log("Drop")
+                contenedor.appendChild(caja);
+            });
+
+
+        </script>
+
+        <div class="container">
+            <div></div>
+        </div>
+
+
+
+
+    </div>
 </body>
 </html>
