@@ -79,3 +79,31 @@ table th{
         background-color: beige;
     }
 }
+
+.tabla_prueba2{
+    width: 80%;
+    height: 80%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: #abacad;
+    flex-direction: row;
+
+    .tabla_MoldesUso{
+        justify-content: right;
+        display: flex;
+        width: 15em;
+        padding: 1em;
+        font-size: 20px;
+    }
+
+    .tabla_botones{
+        justify-content: left;
+        display: flex;
+        background-color: #707070;
+        width: 10em;
+        padding: 1em;
+        height: 10em;
+        border: 1px solid black;
+    }
+}
