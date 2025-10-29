@@ -70,6 +70,7 @@
 
         </script>-->
         
+<<<<<<< HEAD
         <div class="tabla_Revision"> <!--gameBoard-->
 
             <!--
@@ -124,6 +125,9 @@
         <p id="info"></p>
 
         <div class="tabla_prueba">
+=======
+        <div class="tabla_Revision">
+>>>>>>> 459d973 (Prototipo v1 c)
             <table border="1">
                 <tr>
                     <th>HORA/MAQUINA</th>
@@ -152,6 +156,7 @@
             </table>
         </div>
 
+<<<<<<< HEAD
         <div class="tabla_prueba2">
             <div class="tabla_botones">
 
@@ -159,20 +164,175 @@
             <table border="1" class="tabla_MoldesUso">
                 <tr>
                     <th>Moldes en Uso</th>
+=======
+        <div class="tabla_Contol"> <!--gameBoard-->
+        
+            <table border="1" class="tabla_MoldesUso">
+                <tr>
+                    <th colspan="3">Moldes en Uso</th>
+>>>>>>> 459d973 (Prototipo v1 c)
                 </tr>
                 <tr>
                     <td class="cuadro contenedor">
                         <div class="FichaMolde1" id="Ficha1" draggable="true"> <!-- peonPiece y peon-->
+<<<<<<< HEAD
+=======
+                        <h1>MO - </h1>
+                    </div>
+                    </td>
+                    <td class="cuadro contenedor">
+                        <div class="FichaMolde1" id="Ficha1" draggable="true"> <!-- peonPiece y peon-->
+                        <h1>MO - </h1>
+                    </td>
+                    <td class="cuadro contenedor">
+                        <div class="FichaMolde1" id="Ficha1" draggable="true"> <!-- peonPiece y peon-->
+                        <h1>MO - </h1>
+                    </td>
+                </tr>
+            </table>
+
+
+            <!--
+            <div class="contenedor_base">
+                <h1>HORA/MAQUINA</h1>
+            </div>
+
+            <div class="contenedor_X">
+                <div class="contenedor_X_1400">
+                    <h2>14:00</h2>
+                </div>
+                <div class="contenedor_X_1430">
+                    <h2>14:30</h2>
+                </div>
+                <div class="contenedor_X_1500">
+                    <h2>15:00</h2>
+                </div>
+            </div>
+
+            <div class="contenedor_Y">
+                <div class="contenedor_Y_MI001">
+                    <h2>MI-001</h2>
+                </div>
+            </div>-->
+
+            <!-- <main class="Tabla"> -->
+                <!-- <div class="cuadro contenedor"> square beigeSquare -->
+                    <!-- <div class="FichaMolde1" id="Ficha1" draggable="true"> peonPiece y peon -->
+                        <!-- <h1>MO - 371</h1>
+                        <h1>________</h1>
+                        <h1>________</h1>
+                    </div>
+                </div> -->
+                <!-- <div class="cuadro bcontenedor"></div> square brownSquare -->
+                <!-- <div class="cuadro contenedor"></div> square beigeSquare -->
+            <!-- </main> -->
+            
+            <!--    
+            <div class="tabla_Control">
+                <section class="Moldes_En_Uso">
+                    <div class="FichaMolde1" id="Ficha1" draggable="true">
+>>>>>>> 459d973 (Prototipo v1 c)
                         <h1>MO - 371</h1>
                         <h1>________</h1>
                         <h1>________</h1>
                     </div>
+<<<<<<< HEAD
                     </td>
                     <td class="cuadro contenedor"></td>
                     <td class="cuadro contenedor"></td>
                 </tr>
             </table>
         </div>
+=======
+                </section>
+            </div>-->
+
+            
+
+        </div>
+        <p id="info"></p>
+        <div id="overlay"></div>
+        <div id="modal">
+            <label>Elige un estado/color:</label><br>
+            <select id="colorSelect">
+                <option value="green">Verde</option>
+                <option value="red">Rojo</option>
+            </select><br><br>
+            <label>Ponle un nombre:</label><br>
+            <input type="text" id="nameInput"><br><br>
+            <button onclick="confirmarDrop()">Aceptar</button>
+            <button onclick="cancelarDrop()">Cancelar</button>
+        </div>
+        <!-- <div class="tabla_prueba2">
+             <div class="tabla_botones">
+
+            </div> 
+            
+        </div> -->
+
+
+  <div id="draggable" draggable="true">Arrástrame</div>
+
+<table>
+  <tr>
+    <td class="dropzone">Soltar aquí</td>
+    <td class="dropzone">Soltar aquí</td>
+  </tr>
+</table>
+
+<div id="overlay"></div>
+
+<div id="modal">
+  <label>Elige un estado/color:</label><br>
+  <select id="colorSelect">
+    <option value="green">Verde</option>
+    <option value="red">Rojo</option>
+  </select><br><br>
+  <label>Ponle un nombre:</label><br>
+  <input type="text" id="nameInput"><br><br>
+  <button onclick="confirmDrop()">Aceptar</button>
+  <button onclick="cancelDrop()">Cancelar</button>
+</div>
+
+<script>
+  let currentDropZone = null;
+
+  document.getElementById("draggable").addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text/plain", "elemento");
+  });
+
+  document.querySelectorAll(".dropzone").forEach((zone) => {
+    zone.addEventListener("dragover", (e) => e.preventDefault());
+
+    zone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      currentDropZone = zone;
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    });
+  });
+
+  function confirmDrop() {
+    const color = document.getElementById("colorSelect").value;
+    const name = document.getElementById("nameInput").value;
+
+    if (name.trim() !== "") {
+      currentDropZone.innerHTML = `<div style="background-color:${color}; padding:5px; color:white;">${name}</div>`;
+      closeModal();
+    }
+  }
+
+  function cancelDrop() {
+    closeModal();
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("nameInput").value = "";
+  }
+</script>
+>>>>>>> 459d973 (Prototipo v1 c)
 
     <script src="index.js"></script>
     </div>

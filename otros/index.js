@@ -50,4 +50,45 @@ function dragDrop(e){
     console.log(`Ficha ha sido soltado en ${e.target.classList}`)
     e.target.appendChild(FichaMolde1)
     e.target.classList.remove('highlight')
+<<<<<<< HEAD
 }
+=======
+}
+
+let zonaLanzamientoActual = null;
+
+  document.getElementById("Ficha1").addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text/plain", "elemento");
+  });
+
+  document.querySelectorAll(".cuadro").forEach((zone) => {
+    zone.addEventListener("dragover", (e) => e.preventDefault());
+
+    zone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      zonaLanzamientoActual = zone;
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    });
+  });
+
+   function confirmarDrop() {
+    const color = document.getElementById("colorSelect").value;
+    const name = document.getElementById("nameInput").value;
+
+    if (name.trim() !== "") {
+      zonaLanzamientoActual.innerHTML = `<div font-size: 100%; border: 2px solid black; width: 120px; height: 100px; padding: 10px; style="background-color:${color}; color:white;">${name}</div>`;
+      closeModal();
+    }
+  }
+
+    function cancelarDrop() {
+    closeModal();
+  }
+
+    function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("nameInput").value = "";
+  }
+>>>>>>> 459d973 (Prototipo v1 c)
